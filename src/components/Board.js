@@ -12,17 +12,11 @@ const style = {
 }
 
 const Board = ({ squares, onClick }) => (
-    <div style={ style }>
-        <Square onClick={() => onClick('dummyValue')} value='1' />
-        <Square onClick={() => onClick('dummyValue')} value='2' />
-        <Square onClick={() => onClick('dummyValue')} value='3' />
-        <Square onClick={() => onClick('dummyValue')} value='4' />
-        <Square onClick={() => onClick('dummyValue')} value='5' />
-        <Square onClick={() => onClick('dummyValue')} value='6' />
-        <Square onClick={() => onClick('dummyValue')} value='7' />
-        <Square onClick={() => onClick('dummyValue')} value='8' />
-        <Square onClick={() => onClick('dummyValue')} value='9' />
-    
+   
+   <div style={ style }>
+        {squares.map((square, i) => {
+            return <Square key={i} onClick={() => onClick(i)} value={square} />
+        })}
     </div>
 );
 
