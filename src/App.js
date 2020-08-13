@@ -1,11 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Game from './components/Game'
 
-const App = () => {
-  return (
-    <div>Tic Tac Toe</div>
-  )
-}
+const App = () => <Game />;
 
 export default App;
